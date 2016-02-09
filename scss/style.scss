@@ -1,0 +1,147 @@
+$graywhite: #eee;
+$white: #fff;
+$lightgreen: #02b08c;
+$darkgreen: #0a9578;
+
+@import "fontface";
+
+html, body {
+	height: 100%;
+}
+body {
+	font-size: 10px;
+}
+a {
+	transition: .3s ease-in-out;
+	-webkit-transition: .3s ease-in-out;
+	-moz-transition: .3s ease-in-out;
+	-o-transition: .3s ease-in-out;
+	-ms-transition: .3s ease-in-out;
+}
+.bround {
+	color: $white;
+	background: $lightgreen;
+
+	&:hover, &:focus {
+		color: $white;
+		background: $darkgreen;
+		text-decoration: none;
+	}
+}
+.cgreen {
+	color: $lightgreen;
+}
+
+// Navigation Top
+.pageheader {
+	padding-top: 50px;
+}
+.navbar {
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+.navbar-brand {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px;
+  height: auto;
+}
+.navbar-default {
+  background: transparent;
+  border: none;
+  .navbar-nav {
+  	> li {
+  		> a {
+				color: $white;
+				font-family:'Gotham-Medium';
+				font-size: 1.4em;
+    		letter-spacing: 0.5px;
+				&:hover, &:focus {
+					color: $lightgreen;
+				}
+				&.signup {
+					background: $lightgreen;
+					border-radius: 20px;
+					&:hover, &:focus {
+						color: $white;
+						background: $darkgreen;
+					}
+				}
+  		}
+  	}
+  }
+}
+.navbar-nav {
+	> li {
+		> a {
+			padding: 10px 35px;
+		}
+	}
+}
+.nav {
+	&.navbar-right {
+		margin-top: 8px;
+	}
+}
+// Hero Background
+.hero-bg {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../images/hero_bg.jpg) 50% 50% no-repeat;
+}
+.h-cont {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  margin: 0 auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+  max-width: 980px;
+  h2 {
+  	margin-bottom: 50px;
+  	font-size: 4.8em;
+  	font-weight: 700;
+  	span {
+  		font-size: 1.1em;
+  		color: $lightgreen;
+  	}
+  }
+  .f-block {
+  	margin-bottom: 50px;
+  	.bround {
+  		display: inline-block;
+	    padding: 17px 52px;
+	    border-radius: 20px;
+	    font-size: 1.4em;
+	    text-transform: uppercase;
+      font-family: 'Gotham-Bold';
+      letter-spacing: 0.05em;
+  	}
+  	.dlink {
+  		font-size: 1.6em;
+  		color: $white;
+	    text-decoration: underline;
+  		font-family: 'Raleway', sans-serif;
+  		letter-spacing: 0.05em;
+  		&:hover, &:focus {
+  			color: $lightgreen;
+  		}
+  	}
+  }
+}
+.arrow-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  text-align: center;
+  cursor: pointer;
+}
+.f-block {
+	display: block;
+}

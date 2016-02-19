@@ -304,7 +304,7 @@
             <h2>Get started with a free account</h2>
           </div>
           <div class="modal-body">
-            <form name="signup" method="post">
+            <form name="signup" method="post" action="commerce-solution.html">
               <div class="row">
                 <div class="form-group col-xs-12 col-md-6 col-lg-6">
                     <input type="text" class="form-control" placeholder="First Name" required>
@@ -323,7 +323,7 @@
                 </div>
               </div>
               <div class="input-group form-submit">
-                <input type="button" class="bround" value="SIGN UP">
+                <input type="submit" class="bround" value="SIGN UP">
               </div>
             </form>
             <div class="signup-note">

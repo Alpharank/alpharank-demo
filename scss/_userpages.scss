@@ -1,0 +1,363 @@
+.user-page {
+	background: $darkblue;
+  .navbar {
+    padding: 0;
+  }
+}
+.user-pagecont {
+  padding: 180px 0 100px;
+}
+.user-hcont {
+	margin-bottom: 140px;
+	h2 {
+    font-size: 4.8em;
+    max-width: 770px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 65px;
+    color: $white;
+    .cgreen {
+    	font-weight: 900;
+    }
+	}
+  &.congratulation-page {
+    margin-bottom: 50px;
+    .bhead {
+      margin-bottom: 30px;
+    }
+    .congrats {
+      display: block;
+    }
+    .sm-txt {
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+    .logo {
+      .cgreen {
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+  }
+  &.thankyou-page {
+    text-align: center;
+    .bhead {
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 2.4em;
+      color: #fff;
+    }
+  }
+}
+.avail-integ {
+	margin-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.20);
+  h3 {
+  	margin: 4px 0 0;
+    font-size: 2.6em;
+    letter-spacing: 0.05em;
+    color: $white;
+    font-weight: 400;
+    font-family: Gotham-Medium, sans-serif;
+  }
+}
+.fsearch-box {
+  position: relative;
+  .form-control {
+  	border-radius: 2px;
+    background: $lighterdark;
+    border: none;
+    height: 50px;
+    color: $white;
+    letter-spacing: 0.075em;
+  }
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: $white;
+    @include transition(.3s, ease-in-out);
+    &:hover {
+    	background: $darkgreen;
+    	border-color: transparent;
+    }
+  }
+}
+.ecommerce-grid {
+	margin-bottom: 40px;
+	.ebox {
+    position: relative;
+    margin-bottom: 30px;
+    height: 280px;
+    background: #414141;
+    border-radius: 4px;
+    padding: 15px;
+    overflow: hidden;
+    .img-cont {
+      position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    display: flex;
+	    justify-content: center; /* align horizontal */
+	    align-items: center; /* align vertical */
+      padding: 20px;
+    }
+    .ehover {
+    	position: absolute;
+	    left: 0;
+	    right: 0;
+	    bottom: -100%;
+	    background: rgba(0,0,0,0.75);
+	    width: 100%;
+	    height: 100%;
+	    text-align: center;
+	    cursor: pointer;
+    	@include transition(.4s, ease-in-out);
+
+	    .fa {
+  	    display: block;
+		    margin: 65px auto;
+		    font-size: 5em;
+		    color: #fff;
+	    }
+	    .txt {
+	    	display: block;
+        color: #fff;
+		    font-size: 1.4em;
+		    letter-spacing: 0.05em;
+		    font-weight: 500;
+	    }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:before {
+    	content: ' ';
+		  display: block;
+		  padding-top: 100%; /* forces 1:1 aspect ratio */
+    }
+    &:hover,
+    &:focus {
+    	.ehover {
+    		bottom: 0;
+    	}
+    }
+	}
+  &.market-solution {
+    .ebox {
+      height: 230px;
+      background: $darkblue;
+    }
+  }
+}
+.foot-block {
+	text-align: center;
+	p {
+		font-size: 1.8em;
+		color: $white;
+	}
+	.bround {
+    display: inline-block;
+    margin: 30px 0;
+    padding: 15px 52px;
+    border-radius: 40px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-family: 'Gotham-Medium';
+    letter-spacing: 0.05em;
+	}
+  a {
+    cursor: pointer;
+    outline: none;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.progress-bar {
+  position: relative;
+  margin: 40px auto;
+  width: 100%;
+  height: 10px;
+  background: #3c3c3e;
+  border-radius: 5px;
+  .progress {
+    width: 80%;
+    height: 10px;
+    background: $lightgreen;
+    border-radius: 5px;
+  }
+  .progress-num {
+    position: absolute;
+    margin-left: -40px;
+    top: -65px;
+    left: 80%;
+    background: #3c3c3e;
+    padding: 15px 17px;
+    color: $lightgreen;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .progress-num:after {
+    top: 80%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(60, 60, 62, 0);
+    border-top-color: #3c3c3e;
+    border-width: 20px;
+    margin-left: -20px;
+  }
+}
+.name-list {
+  margin: 150px auto 30px;
+  label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 4em;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    letter-spacing: 0.075em;
+  }
+  .input-listname {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    height: 80px;
+    font-size: 4em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    color: $white;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(2,176,140,0.50);
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(2,176,140,0.50);
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(2,176,140,0.50);
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: rgba(2,176,140,0.50);
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: rgba(2,176,140,0.50);
+    }
+    &::before {
+      content: '*';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: rgba(2,176,140,0.50);
+    }
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Credit Card Unlock Lists
+/*-----------------------------------------------------------------------------------*/
+.unlock-overlay {
+  margin: 0 auto;
+  width: 600px;
+  background: #13b18b;
+  .cart-cont {
+    float: left;
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+    img {
+      margin: 60px auto;
+    }
+    .amount {
+      margin: 30px 0 50px;
+      color: #fff;
+      font-size: 4em;
+      font-weight: 900;
+      letter-spacing: 0.075em;
+      sup {
+        font-size: 20px;
+      }
+      .smonth {
+        font-size: 14px;
+      }
+    }
+    .i-list {
+      font-size: 1.6em;
+      color: #fff;
+      span {
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+  }
+  .unlock-lists {
+    float: right;
+    position: relative;
+    padding: 30px;
+    width: 70%;
+    background: #25252a;
+    .form-control {
+      height: 50px;
+      border-radius: 2px;
+      background: #49494b;
+      color: #fff;
+      font-family: Raleway, sans-serif;
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.075em;
+      border: none;
+      text-align: center;
+    }
+    p {
+      font-size: 1.4em;
+      color: $white;
+    }
+    .btn {
+      height: 50px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    .card-wrapper {
+      margin-bottom: 25px;
+    }
+    &:after {
+      right: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(37, 37, 42, 0);
+      border-right-color: #25252a;
+      border-width: 20px;
+      margin-top: -20px;
+    }
+  }
+}

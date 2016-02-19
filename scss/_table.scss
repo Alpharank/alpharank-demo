@@ -1,0 +1,26 @@
+.table-responsive {
+	max-height: 650px;
+	&::-webkit-scrollbar {
+		height: 6px;
+    width: 6px;
+	}
+	 
+	&::-webkit-scrollbar-track {
+    background: $darkblue;
+    border-radius: 10px;
+	}
+	 
+	&::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $lightgreen;
+	}
+}
+.table-lists {
+	max-height: 650px;
+	td {
+		font-size: 1.6em;
+		color: $white;
+
+	}
+	overflow: scroll;
+}

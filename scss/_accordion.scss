@@ -1,0 +1,128 @@
+.panel-group {
+	.panel {
+		margin-bottom: 20px;
+		border: none;
+		border-radius: 25px;
+		background: $lighterdark;
+	}
+}
+.panel-default {
+	> .panel-heading {
+		position: relative;
+		padding: 15px 25px;
+		border-radius: 25px;
+		background: $lighterdark;
+		.panel-insight-list {
+      float: left;
+	    font-size: 1.4em;
+	    font-weight: 500;
+	    font-family: 'Gotham-Medium';
+	    color: #eee;
+	    letter-spacing: 0.075em;
+	    .influencer-num {
+		    margin: 0 15px;
+		    padding: 6px 18px;
+  	    background: #02b08c;
+		    border-radius: 20px;
+		    font-weight: 700;
+		    font-family: 'Raleway',sans-serif;
+	    }
+		}
+		+ .panel-collapse {
+			> .panel-body {
+				border: none;
+			}
+		}
+		a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+}
+.panel-body {
+	padding: 15px 8% 100px;
+}
+.phead {
+  margin-top: 50px;
+  margin-bottom: 60px;
+	h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #eee;
+	}
+}
+.tdata-box {
+  margin-bottom: 15px;
+  padding: 40px 15px;
+  text-align: center;
+  background: #323234;
+  span {
+    font-size: 4em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    color: #02b08c;
+  }
+}
+.tdata-title {
+  display: block;
+  text-align: center;
+  font-size: 1.6em;
+  color: $white;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+.top-psold {
+  padding-left: 0;
+  text-align: center;
+	li {
+    display: inline-block;
+    background: #323234;
+    color: #fff;
+    margin: 10px;
+    padding: 15px;
+    font-size: 1.4em;
+	}
+}
+.market-solutions-progress {
+	h5 {
+		font-size: 1.8em;
+    color: $white;
+	}
+	.num {
+    display: inline-block;
+    margin-right: 30px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background: $lightgreen;
+    border-radius: 30px;
+    line-height: 25px;
+    font-weight: normal;
+	}
+	p {
+    text-align: center;
+    font-size: 1.6em;
+    color: #fff;
+	}
+}	
+.export-to {
+	li {
+		display: inline-block;
+		&.img2 {
+	   margin: 0 50px;
+		}
+	}
+}
+.market-solutions-success {
+	img {
+		margin: 0 auto 30px;
+	}
+}

@@ -4,7 +4,7 @@ Date: 2015-09-17
 ---------------------------------------------------------------------------------------------------- */
 /* Reduce HTTP request */
 @import url("../css/font-awesome.min.css");
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,700,800|Questrial);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,600,700,800|Questrial);
 @font-face {
   font-family: 'Gotham-Medium';
   src: url("../fonts/Gotham-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Medium.otf") format("opentype"), url("../fonts/Gotham-Medium.woff") format("woff"), url("../fonts/Gotham-Medium.ttf") format("truetype"), url("../fonts/Gotham-Medium.svg#Gotham-Medium") format("svg");
@@ -506,7 +506,7 @@ body {
   margin: 20px 0 15px; }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Modal 
+/*  Modal
 /*-----------------------------------------------------------------------------------*/
 .modal .modal-dialog {
   width: 600px;

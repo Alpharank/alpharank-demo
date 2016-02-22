@@ -181,7 +181,7 @@
 }
 .m-commerce {
   max-width: 170px;
-  height: 55px;
+  height: auto;
 }
 
 #modal-upload {
@@ -202,8 +202,10 @@
   .form-submit {
     margin: 10px auto 0;
     .filename {
+      display: block;
       margin-bottom: 30px;
       font-size: 1.4em;
+      cursor: pointer;
       .fa {
         margin-right: 10px;
         font-size: 1em;

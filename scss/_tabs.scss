@@ -1,0 +1,34 @@
+.nav-tabs {
+	float: right;
+	border: none;
+	> li {
+		> a {
+		    margin: 0 15px;
+		    padding: 6px 18px;
+		    background: #02b08c;
+		    border-radius: 20px;
+		    font-weight: 700;
+		    font: 700 12px/1 'Raleway',sans-serif;
+		    border: none;
+		    color: #fff;
+		    letter-spacing: 0.075em;
+		    &:hover,
+		    &:focus {
+		    	background: #19856f;
+		    }
+		}
+	}
+	> li.active {
+  	> a {
+  		color: $white;
+  		border: none;
+  		background: #19856f;
+	    &:hover,
+	    &:focus {
+	    	color: $white;
+	    	border: none;
+	    	background: #19856f;
+	    }
+  	} 
+	}
+}

@@ -284,7 +284,7 @@
             </form>
             <div class="user-recover clearfix">
               <a href="#" class="left">Forgot Password?</a>
-              <span class="right">Don't have an account? <a class="cgreen" href="#">Sign Up</a></span>
+              <span class="right">Don't have an account? <a class="cgreen" data-toggle="modal" data-target="#signup" href="#">Sign Up</a></span>
             </div>
           </div>
         </div>

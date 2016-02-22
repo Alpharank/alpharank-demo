@@ -269,7 +269,7 @@
             <img src="img/alpharank_white_logo.png">
           </div>
           <div class="modal-body">
-            <form acion="commerce-solution.html" name="login" method="post">
+            <form action="commerce-solution.html" name="login" method="post">
               <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email" required>
               </div>
@@ -309,7 +309,7 @@
             <h2>Get started with a free account</h2>
           </div>
           <div class="modal-body">
-            <form acion="commerce-solution.html" name="signup" method="post">
+            <form action="commerce-solution.html" name="signup" method="post">
               <div class="row">
                 <div class="form-group col-xs-12 col-md-6 col-lg-6">
                     <input type="text" class="form-control" placeholder="First Name" required>

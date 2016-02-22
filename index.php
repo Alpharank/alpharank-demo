@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Identify Customers You Can't Afford to Lose | AlphaRank</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,6 +18,11 @@
 
   </head>
   <body class="home main">
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
     <section class="hero-bg">
       <header id="main-nav" class="pheader">
         <nav class="navbar navbar-default">
@@ -39,8 +44,8 @@
                 <li><a href="whitepapers.html">WHITE PAPERS</a></li>
                 <li><a href="about.htm">ABOUT</a></li>
                 <li><a href="contact.htm">CONTACT</a></li>
-                <li><a data-toggle="modal" data-target="#login">LOGIN</a></li>
-                <li><a data-toggle="modal" data-target="#signup" class="signup bround" href="#">SIGN UP</a></li>
+                <li><a data-toggle="modal" data-target="#login-modal">LOGIN</a></li>
+                <li><a data-toggle="modal" data-target="#signup-modal" class="signup bround" href="#">SIGN UP</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -254,7 +259,7 @@
       </footer><!--end /pagefooter-->
 
 
-    <div id="login" class="modal fade" role="dialog">
+    <div id="login-modal" class="modal fade" role="dialog">
 
       <div class="modal-dialog">
         <!-- Modal content-->
@@ -264,7 +269,7 @@
             <img src="img/alpharank_white_logo.png">
           </div>
           <div class="modal-body">
-            <form name="login" method="post" action="commerce-solution.html">
+            <form acion="commerce-solution.html" name="login" method="post">
               <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email" required>
               </div>
@@ -284,7 +289,7 @@
             </form>
             <div class="user-recover clearfix">
               <a href="#" class="left">Forgot Password?</a>
-              <span class="right">Don't have an account? <a class="cgreen" data-toggle="modal" data-target="#signup" href="#">Sign Up</a></span>
+              <span class="right">Don't have an account? <a class="cgreen"  data-toggle="modal" data-target="#signup-modal">Sign Up</a></span>
             </div>
           </div>
         </div>
@@ -292,7 +297,7 @@
 
     </div><!-- Modal Login End-->
 
-    <div id="signup" class="modal fade" role="dialog">
+    <div id="signup-modal" class="modal fade" role="dialog">
 
       <div class="modal-dialog">
         <!-- Modal content-->
@@ -304,7 +309,7 @@
             <h2>Get started with a free account</h2>
           </div>
           <div class="modal-body">
-            <form name="signup" method="post" action="commerce-solution.html">
+            <form acion="commerce-solution.html" name="signup" method="post">
               <div class="row">
                 <div class="form-group col-xs-12 col-md-6 col-lg-6">
                     <input type="text" class="form-control" placeholder="First Name" required>
@@ -328,7 +333,7 @@
             </form>
             <div class="signup-note">
               <p>By clicking 'Sign Up' you agree to Alpharank's <a href="" class="cgreen">Terms and Condition</a></p>
-              <p>Already have an account? <a class="cgreen" data-toggle="modal" data-target="#login">Log In</a></p>
+              <p>Already have an account? <a class="cgreen" data-toggle="modal" data-target="#login-modal">Log In</a></p>
             </div>
           </div>
         </div>
@@ -340,18 +345,42 @@
     <script src="js/main.js"></script>
     <script>
       $(document).ready(function(){
+
+        // Preload
+        $(window).on('load', function() {
+         setTimeout(function(){
+            $('body').addClass('loaded');
+         }, 3000);
+        });
+
+        // Scroll Nav
         var pcont = $('.page-content').offset();
 
-        $(window).bind('scroll', function() {
-        var scrollTop = $(this).scrollTop();
+          $(window).bind('scroll', function() {
+          var scrollTop = $(this).scrollTop();
 
-        var scrolled = (scrollTop > 150)  ? $('#main-nav .navbar-default').addClass('scrolled') : $('#main-nav .navbar-default').removeClass('scrolled');
-        if(scrollTop > pcont.top - 100) {
-          $('#main-nav .navbar-default').addClass('navbar-fixed-top');
-        } else {
-          $('#main-nav .navbar-default').removeClass('navbar-fixed-top');
-        }
-      });
+          var scrolled = (scrollTop > 150)  ? $('#main-nav .navbar-default').addClass('scrolled') : $('#main-nav .navbar-default').removeClass('scrolled');
+          if(scrollTop > pcont.top - 100) {
+            $('#main-nav .navbar-default').addClass('navbar-fixed-top');
+          } else {
+            $('#main-nav .navbar-default').removeClass('navbar-fixed-top');
+          }
+        });
+
+        // Show 1 modal at a time
+        var modalUniqueClass = ".modal";
+          $('.modal').on('show.bs.modal', function(e) {
+            var $element = $(this);
+            var $uniques = $(modalUniqueClass + ':visible').not($(this));
+            if ($uniques.length) {
+              $uniques.modal('hide');
+              $uniques.one('hidden.bs.modal', function(e) {
+                $element.modal('show');
+              });
+              return false;
+            }
+          });
+
       });
     </script>
   </body>
